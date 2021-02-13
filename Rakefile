@@ -43,7 +43,7 @@ task :build_pages do
     .collect { |suburb| suburb.gsub(/[^a-z\s]/, "").split(" ") }
     .flatten.uniq
 
-  words[0..10].each do |word|
+  words.each do |word|
     generate_files word, localities.by_suburb(word)
   end
 end
