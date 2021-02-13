@@ -33,7 +33,7 @@ task :build_pages do
 
   postcodes = localities.collect(&:postcode).uniq
 
-  postcodes[0..10].each do |postcode|
+  postcodes.each do |postcode|
     generate_files postcode, localities.by_postcode(postcode)
   end
 
