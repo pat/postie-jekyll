@@ -33,7 +33,7 @@ task :build_pages do
 
   postcodes = localities.collect(&:postcode).uniq
 
-  postcodes.each do |postcode|
+  postcodes[0..10].each do |postcode|
     generate_files postcode, localities.by_postcode(postcode)
   end
 
@@ -43,7 +43,7 @@ task :build_pages do
     .collect { |suburb| suburb.gsub(/[^a-z\s]/, "").split(" ") }
     .flatten.uniq
 
-  words.each do |word|
+  words[0..10].each do |word|
     generate_files word, localities.by_suburb(word)
   end
 end
