@@ -1,0 +1,6 @@
+title: Postie
+layout: default
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Postie</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+  <h1>Localities by {{ page.context }}</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Postcode</th>
+        <th>Suburb</th>
+        <th>State</th>
+        <th>Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for locality in page.localities %}
+      <tr>
+        <td>{{ locality.postcode }}</td>
+        <td>{{ locality.suburb }}</td>
+        <td>{{ locality.state }}</td>
+        <td>{{ locality.comment }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <p>Service Provided by <a href="https://freelancing-gods.com">Pat Allan</a>.</p>
+</body>
+</html>
