@@ -1,6 +1,9 @@
 title: Postie
+url: https://auspostie.com
 layout: default
 exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
+  - netlify.toml
+  - plugins
